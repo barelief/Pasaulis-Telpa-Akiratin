@@ -1,31 +1,33 @@
+<!-- markdownlint-disable MD013 -->
+
 # Pasaulis Telpa Akiratin
 
 ![Pasaulis telpa akiratin website](https://literaci.lt/pta/website_pta.jpg)
 
-Interactive demo: http://literaci.lt/pta
-Printed demo: http://literaci.lt/print
+Interactive demo: https://literaci.lt/pta  
+Printed demo: https://literaci.lt/print
+Vue based prototype: https://literaci.lt/postvilnius
 
 ## Overview
 
 **Pasaulis Telpa Akiratin** is a bilingual poetry collection website, presenting a carefully curated selection of Polish and Lithuanian poems. The site organizes poems under various themes, including relationships, identity, and transgression, offering readers an immersive experience in exploring diverse poetic expressions.
 
-The project is built with modern web development technologies such as Astro, React, Tailwind CSS, Airtable, and Paged.js. These technologies work together to deliver a seamless, responsive user experience across devices.
-
-
+The project is built with modern web development technologies such as Astro, React, nanostores, Tailwind CSS, Airtable, and Paged.js. 
 
 ## Features
 
 - **Bilingual Content**: The website supports both Polish and Lithuanian languages, catering to a diverse audience.
 - **Thematic Categorization**: Poems are categorized under distinct themes like relationships, identity, and transgression for easy navigation.
 - **Dynamic Foldable UI**: A unique foldable UI component allows users to dynamically fold and unfold poem content, enhancing the browsing experience.
-- **Liked Poems Model**: Users can interact with poems by marking them as liked, creating a personalized collection of favorite poems.
+- **Liked Poems modal**: Users can interact with poems by marking them as liked, creating a personalized collection of favorite poems.
 - **Interactive Shopping Cart**: An intuitive shopping cart feature is integrated with the Paysera API, providing a one-product shopping experience, allowing users to purchase books directly from the website.
-- **PDF Generation**: Paged.js and Puppetteer are utilized to generate the final PDF version of the book, facilitating the production of a printed copy using java.
+- **PDF Generation**: Paged.js and Puppetteer are utilized to generate the final PDF version of the book, facilitating the production of a printed copy using JavaScript.
  
 ## Technologies Used
 
 - **Astro**: A modern, fast web framework optimized for static site generation.
 - **React**: A JavaScript library for building user interfaces, allowing for dynamic and responsive components.
+- Nanostores: Lightweight state management solution used for managing and persisting state outside of components, enhancing application efficiency and scalability. 
 - **Tailwind CSS**: A utility-first CSS framework that helps in creating responsive and customizable UI designs.
 - **Airtable**: A flexible database used for managing and organizing the poem content.
 - **Paged.js**: A library for paginating web content into print-ready PDFs, perfect for generating the final printed book version.
@@ -74,3 +76,19 @@ src/
   - [ ] Favorite poem modal
   - [x] Shopping cart modal
   - [ ] checkout modal
+
+
+## Author
+
+- *Bartosh Polonski*** - [GitHub Profile](https://github.com/barelief)
+
+## License
+
+The code in this repository is licensed under the MIT License.  
+
+*However, the poems and book content (`poems.json`) are **not** covered by this license and are copyrighted by their respective authors. Please contact the authors or rights holders for more information regarding the usage of the poems and book content.*
+
+© Mantas Balakauskas, Dorota Bartoszewicz, Mirosława Bartoszewicz, Alina Borzenkaitė, Ramunė Brundzaitė, Nerijus Cibulskas, Linas Daugėla, Marek Domański, Daniel Dowejko, Paulius Gadeikis, Dovydas Grajauskas, Ignė Grikevičiūtė, Patricija Gudeikaitė, Goda Gurinskaitė, Jonas Jankauskas, Aušra Kaziliūnaitė, Jovaras Kelpšas, Mindaugas Kirka, Daniel Krajczyński, Laura Kromalcaitė, Žygimantas Kudirka, Gabrielė Labanauskaitė, Augustas Lapinskas, Romuald Ławrynowicz, Ramūnas Liutkevičius, Agnieszka Mackojć, Marzena Mackojć-Sinkevičienė, Agnieszka Masalytė, Bożena Naruszewicz, Ewa Nausewicz, Ernestas Noreika, Dominykas Norkūnas, Dominika Olicka, Karol Pasznikowicz, Krystyna Pawtel, Tomas Petrulis, Marius Povilas Elijas Martynenko, Nojus Saulytis, Tomasz Snarski, Monika Staugaitytė, Patrycja Stefanowicz, Tomas Tamošiūnas, Guoda Taraškevičiūtė, Uršulė Toleikytė, Mantas Toločka, Kristina Užėnaitė, Indrė Valantinaitė, Gabrielė Vetkinaitė, Ingrida Viluckytė, Kamila Zujevič, Maria Żukowska, eilėraščiai, 2023  
+© Birutė Jonuškaitė, Vidas Morkūnas, Žilvinas Norkūnas, Jūratė Petronienė, Bartoš Polonski, Agnieszka Rembiałkowska, vertimai, 2023  
+© Bartoš Polonski, sudarymas, dizainas, 2023  
+© Lenkų literatų asociacija, 2023  
