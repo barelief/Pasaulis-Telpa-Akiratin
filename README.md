@@ -2,7 +2,7 @@
 
 ![Pasaulis telpa akiratin website](https://literaci.lt/pta/website_pta.jpg)
 
-Interactive demo: http://literaci.lt/
+Interactive demo: http://literaci.lt/pta
 Printed demo: http://literaci.lt/print
 
 ## Overview
@@ -20,7 +20,7 @@ The project is built with modern web development technologies such as Astro, Rea
 - **Dynamic Foldable UI**: A unique foldable UI component allows users to dynamically fold and unfold poem content, enhancing the browsing experience.
 - **Liked Poems Model**: Users can interact with poems by marking them as liked, creating a personalized collection of favorite poems.
 - **Interactive Shopping Cart**: An intuitive shopping cart feature is integrated with the Paysera API, providing a one-product shopping experience, allowing users to purchase books directly from the website.
-- **PDF Generation**: Paged.js is utilized to generate the final PDF version of the book, facilitating the production of a printed copy using java.
+- **PDF Generation**: Paged.js and Puppetteer are utilized to generate the final PDF version of the book, facilitating the production of a printed copy using java.
  
 ## Technologies Used
 
