@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// Import necessary modules and components
+import { Image } from "astro:assets";
+import data from "./../assets/data/poems.json";
+import type { Poem } from "../types/poem"; // import type
+
+// import UI companents
+import PoemTopicSection from "../components/PoemTopicSection.astro";
+import ToggleSection from "../components/ToggleSection.astro";
+import bookImage from "../assets/images/textures/front.jpeg";
+import FoldedDiv from "../components/react/FoldedDiv";
+import AddtoCart from "../components/react/AddToCart";
+import { toggleVisibilityOfSection } from './../assets/scripts/toggleDivVisibility.js'
+/**
+ * Filter the poems data based on the type.
+ * @param data - The full list of poems.
+ * @param type - The type of poem to filter by (e.g., "relationship", "identity", "transgression").
+ * @returns An array of poems that match the given type.
+ */
+function filterDataByType(data: Poem[], type: string) {
+  return data.filter((item) => item.type === type);
+}
+
+// Filter the poems into different categories/
+const relationship = filterDataByType(data as Poem[], "relationship");
+const identity = filterDataByType(data as Poem[], "identity");
+const transgression = filterDataByType(data as Poem[], "transgression");
+---
+
+<Layout title="Pasaulis telpa akiratin - lenkų ir lietuvių poezijos rinktinė">
+  <!-- Book image section -->
+  <div class="md:px-32 px-10">
+    <Image src={bookImage} alt="Pasaulis telpa akiratin" class="rounded" />
+  </div>
+  <div class="text-center font-bold py-2 poem-body">8,99€</div>
+  <div class="pb-4 poem-body text-center">
+    lenkų ir lietuvių poezijos rinktinė <br />
+    <small
+      ><a
+        class="font-mono text-xs"
+        target="_blank"
+        href="https://ibiblioteka.lt/metis/publication/LIBIS000000512179?q=0h55xgkgg"
+        >ISBN 978-609-96126-7-6 ↗</a
+      ></small
+    >
+  </div>
+
+  <!-- Button to purchase the book -->
+  <AddtoCart client:only="react" />
+
+  <!-- Poem sections categorized by type -->
+
+  <!-- Transgression Poem Section -->
+  <PoemTopicSection title="Transgresija" />
+  <ToggleSection section="sectionTransgression" id="1" />
+
+  <div id="sectionTransgression">
+    {
+      transgression.map((item: Poem) => (
+        <FoldedDiv client:only="react" poem={item} />
+      ))
+    }
+  </div>
+
+  <!-- Relationship Poem Section -->
+  <PoemTopicSection title="Santykiai" />
+  <ToggleSection section="sectionRelationship" />
+
+  <div id="sectionRelationship">
+    {
+      relationship.map((item: Poem) => (
+        <FoldedDiv client:only="react" poem={item} />
+      ))
+    }
+  </div>
+  <!-- Identity Poem Section -->
+  <PoemTopicSection title="Tapatybė" />
+  <ToggleSection section="sectionIdentity" />
+
+  <div id="sectionIdentity">
+    {
+      identity.map((item: Poem) => (
+        <FoldedDiv client:only="react" poem={item} />
+      ))
+    }
+  </div>
+  <script src={`${import.meta.env.BASE_URL}scripts/toggleDivVisibility.js`} is:inline></script>
+</Layout>

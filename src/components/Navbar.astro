@@ -1,0 +1,98 @@
+---
+// import logo from "../assets/images/favicon.png";
+// import { Image } from "astro:assets";
+import ToggleFlyoutCart from "../components/react/ToggleFlyoutCart.tsx";
+import ToggleFlyoutLikes from "../components/react/ToggleFlyoutLikes.tsx";
+
+
+---
+
+<header class="sticky top-0 z-10">
+  <div class="bg-gray-100 flex items-center justify-center">
+    <nav
+      class="bg-white shadow-md rounded-lg p-4 flex items-center justify-between w-full max-w-4xl"
+    >
+      <!-- Left Side - Links -->
+      <div class="flex items-center gap-4 relative inline-block">
+        <!-- Home Link -->
+        <!-- <a href="#home" class="text-gray-700 text-lg hover:text-blue-500 transition-colors duration-300"><Image src={logo} alt="Favicon" class="h-[20px] w-[20px]"  /></a> -->
+        <!-- About Project Link -->
+
+        <div class="relative inline-block flex items-center pt-1 pr-3">
+          <a href={import.meta.env.BASE_URL} rel="prefetch">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              ><path
+                fill="#000000"
+                d="M1 2.828c.885-.37 2.154-.769 3.388-.893c1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493c-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752c1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81c-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02c1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877c1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"
+              ></path></svg
+            >
+          </a>
+        </div>
+        <div class="relative inline-block flex items-center">
+          <a rel="prefetch"
+            href={`${import.meta.env.BASE_URL}apie`}
+            class="text-gray-700 text-lg hover:text-blue-500 transition-colors duration-300"
+            >apie knygą</a
+          >
+        </div>
+      </div>
+
+      <!-- Right Side - Language Switcher and Shopping Cart -->
+      <div class="flex items-center gap-4">
+        <!-- Language Switcher -->
+        <div class="relative inline-block flex items-center">
+          <!-- <select
+            class="appearance-none bg-gray-100 border border-gray-300 text-gray-700 py-1 px-4 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-sans"
+          >
+            <option>PL</option>
+            <option>LT</option>
+          </select>-->
+          <span class="font-mono text-sm">PL</span>
+        </div>
+
+        <!-- Shopping Cart Icon -->
+        <div class="relative inline-block flex items-center">
+          <ToggleFlyoutCart client:only="react" />
+        </div>
+        <!-- liked Poems icon likedFlyoutToggle -->
+        <div class="relative inline-block flex items-center">
+          <ToggleFlyoutLikes client:only="react" />
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<style>
+  header {
+    margin: 0em 0 2em;
+    font-family: "Work Sans";
+  }
+  h2 {
+    margin: 0.5em 0;
+  }
+  @media (min-width: 768px) {
+    a {
+      display: inline-block;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-size: medium;
+  }
+  a.active {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+</style>

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Serif+Text:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@tailwind base;
+@tailwind tailwind;
+@tailwind components;
+
+body {
+  background: bg-red text-blue;
+}
+
+pre {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  font-family: "Albert Sans", sans-serif;
+}
+
+.poem-title {
+  font-family: "DM Serif Text";
+}
+
+.poem-author {
+  font-family: "Playfair Display SC";
+}
+
+.poem-body {
+  font-family: "Crimson Text", Garamond, serif;
+}
+
+.poem-section {
+  font-family: "Playfair Display";
+}
+
+@layer components {
+  .btn-round {
+    @apply rounded-full;
+  }
+
+  .btn {
+    @apply hover:bg-gray-800 bg-white border-black border hover:text-white text-gray-800 py-1 px-3;
+  }
+}
