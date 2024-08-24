@@ -3,8 +3,7 @@
 // import { Image } from "astro:assets";
 import ToggleFlyoutCart from "../components/react/ToggleFlyoutCart.tsx";
 import ToggleFlyoutLikes from "../components/react/ToggleFlyoutLikes.tsx";
-
-
+import ReopenLastModal from "../components/react/modal/ReopenLastModal.jsx";
 ---
 
 <header class="sticky top-0 z-10">
@@ -33,7 +32,8 @@ import ToggleFlyoutLikes from "../components/react/ToggleFlyoutLikes.tsx";
           </a>
         </div>
         <div class="relative inline-block flex items-center">
-          <a rel="prefetch"
+          <a
+            rel="prefetch"
             href={`${import.meta.env.BASE_URL}apie`}
             class="text-gray-700 text-lg hover:text-blue-500 transition-colors duration-300"
             >apie knygą</a
@@ -43,6 +43,7 @@ import ToggleFlyoutLikes from "../components/react/ToggleFlyoutLikes.tsx";
 
       <!-- Right Side - Language Switcher and Shopping Cart -->
       <div class="flex items-center gap-4">
+        <!-- <ReopenLastModal client:only="react" /> -->
         <!-- Language Switcher -->
         <div class="relative inline-block flex items-center">
           <!-- <select

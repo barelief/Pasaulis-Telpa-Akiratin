@@ -3,13 +3,13 @@ const { title } = Astro.props;
 import "../assets/styles/base.css";
 import NavBar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import ModalCart from "../components/react/modal/ModalCart";
+import ModalManagerCheckout from "../components/react/modal/ModalManagerCheckout";
 ---
 
 <html lang="en-US">
   <head>
     <title>{title}</title>
-<meta name="verify-paysera" content="c7bd92de78936e2244ea02e22ef90c4f"> 
+    <meta name="verify-paysera" content="c7bd92de78936e2244ea02e22ef90c4f" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {/* add SEO component here */}
     <meta charset="UTF-8" />
@@ -24,6 +24,7 @@ import ModalCart from "../components/react/modal/ModalCart";
         <Footer />
       </div>
     </main>
-    <ModalCart client:only="react" />
+    <!-- Modal manager component -->
+    <ModalManagerCheckout client:only="react" />
   </body>
 </html>

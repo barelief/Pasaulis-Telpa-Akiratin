@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStore } from "@nanostores/react";
-import { likedPoems } from "../../stores/commonStore";
+import { likedPoems } from "../../stores/likesStore";
 
 const ToggleFlyoutLikes: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

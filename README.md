@@ -4,9 +4,9 @@
 
 ![Pasaulis telpa akiratin website](https://literaci.lt/pta/website_pta.jpg)
 
-Interactive demo: https://literaci.lt/pta  
-Printed demo: https://literaci.lt/print
-Vue based prototype: https://literaci.lt/postvilnius
+Interactive demo: https://literaci.lt/pta    
+Printed demo: https://literaci.lt/print  
+Vue based prototype: https://literaci.lt/postvilnius  
 
 ## Overview
 
@@ -80,7 +80,7 @@ src/
 
 ## Author
 
-- *Bartosh Polonski*** - [GitHub Profile](https://github.com/barelief)
+- **Bartosh Polonski*** - [GitHub Profile](https://github.com/barelief)
 
 ## License
 

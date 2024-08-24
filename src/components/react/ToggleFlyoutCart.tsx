@@ -1,13 +1,15 @@
-import { useState } from "react";
 import { useStore } from "@nanostores/react";
-import { cartItemQty, isCartOpen, toggleCart } from "../../stores/commonStore";
+import { toggleModal, reopenLastModal } from '../../stores/modalStore'
+import { cartItemQty } from "../../stores/checkoutStore";
 
 const ToggleFlyoutCart = () => {
-  const isOpen = useStore(isCartOpen);
-  const qty = useStore(cartItemQty);
+  const qty = Number(useStore(cartItemQty));
+  const openModal = () => {
+    reopenLastModal();  // Toggles the specified modal
+  };
 
   return (
-    <div className="relative inline-block cursor-pointer" onClick={toggleCart}>
+    <div className="relative inline-block cursor-pointer" onClick={openModal}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"

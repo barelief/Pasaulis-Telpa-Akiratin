@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 // import { useStore } from "@nanostores/react";
 // import { foldTrigger } from "../../stores/foldStore";
-import { addLikedPoem, removeLikedPoem } from "../../stores/commonStore";
+import { addLikedPoem, removeLikedPoem } from "../../stores/likesStore";
 
 const FoldedDiv = (props) => {
   // State to track whether the div is active (unfolded) or not (folded)

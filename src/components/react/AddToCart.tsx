@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useStore } from "@nanostores/react";
-import { addCartItemQty } from "../../stores/commonStore";
+import { addCartItemQty } from "../../stores/checkoutStore";
 
 const AddToCart = () => {
   const [quantity, setQuantity] = useState(1);
@@ -8,7 +7,6 @@ const AddToCart = () => {
   const handleSubmit = () => {
     if (quantity > 0) {
       addCartItemQty(quantity);
-      console.log(`button pressed`);
     }
   };
 
