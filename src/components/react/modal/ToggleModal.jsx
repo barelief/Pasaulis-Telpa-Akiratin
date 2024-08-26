@@ -1,4 +1,4 @@
-import { toggleModal } from '../../../stores/checkoutStore';
+import { toggleModal } from '../../../stores/modalStore';
 
 const ToggleModal = ({ modalName }) => {
   // This function is called when the button is clicked

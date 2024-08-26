@@ -1,6 +1,6 @@
 // compoentn button thatmakes last active modal visible
 // 
-import { reopenLastModal } from '../../../stores/checkoutStore';
+import { reopenLastModal } from '../../../stores/modalStore.ts';
 
 const ReopenLastModal = () => {
   // This function is called when the button is clicked
