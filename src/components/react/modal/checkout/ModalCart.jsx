@@ -84,11 +84,11 @@ const ModalCart = () => {
         </div>
 
         {storedQty > 0 ? (
-          <>
+          <><div class="p-4"></div>
             {/* Shipping Location Selector */}
             <label>
               <select
-                className="w-full p-2 pt-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={selectedShippingValue} // Controls the currently selected option
                 onChange={handleLocationChange} // Updates state and store on change
               >
