@@ -83,9 +83,10 @@ const FoldedDiv = (props) => {
 
   return (
     <div
+      id={`poem${props.poem.id}`}
       ref={divRef} // Attach the ref to the div element for height calculations
       style={{ height: isFolded ? `${foldedHeight}px` : `${divHeight}px` }}
-      className={` ${divStyle.default}
+      className={`poem-element ${divStyle.default}
        ${foldedStyle}
       `}
     >

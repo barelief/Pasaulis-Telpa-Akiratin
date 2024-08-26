@@ -40,7 +40,7 @@ const ToggleFlyoutLikes: React.FC = () => {
       )}
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-4">
+        <div className="absolute right-0 mt-2 w-52 bg-white shadow-lg border border-gray-200 rounded-lg p-4 overflow-auto h-[400px]">
           <h3 className="text-sm font-bold">Patikę eilėrasčiai</h3>
           {likedPoemsList.length === 0 ? (
             <p className="text-xs text-gray-600">
@@ -48,10 +48,10 @@ const ToggleFlyoutLikes: React.FC = () => {
               kad jis atsirastų šiame sąraše.
             </p>
           ) : (
-            <ul className="text-xs text-gray-700">
+            <ul className="text-xs text-gray-700 list-disc ml-3">
               {likedPoemsList.map((poem) => (
                 <li key={poem.id} className="py-1">
-                  „{poem.title}“ {poem.author}
+                  <a href={`#poem${poem.id}`}>„{poem.title}“ {poem.author}</a>
                 </li>
               ))}
             </ul>
