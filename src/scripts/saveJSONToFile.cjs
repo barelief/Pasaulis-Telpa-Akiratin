@@ -1,6 +1,8 @@
 const fs = require("fs").promises;
 const path = require("path");
-const saveJSONToFile = async (data, fileName = "./../astro-vue/src/assets/data/poems.json") => {
+const config = require('./config.cjs');
+
+const saveJSONToFile = async (data, fileName = config.path) => {
   try {
     // Resolve the file path to avoid issues with relative paths
     const filePath = path.resolve(__dirname, fileName);

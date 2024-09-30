@@ -30,3 +30,4 @@ sync.cmd
 *.jpeg
 /src/pages/sandbox
 /src/sandbox
+src/scripts/config.cjs
