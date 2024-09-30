@@ -1,4 +1,5 @@
 ---
+//
 const { section, id } = Astro.props;
 ---
 
@@ -8,6 +9,7 @@ const { section, id } = Astro.props;
     id={`toggleSectionVisibility${id}`}
     data-toggle-target={section}
   >
+    <!-- intial default button -->
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="20"

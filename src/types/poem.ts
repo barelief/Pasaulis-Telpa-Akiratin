@@ -7,5 +7,7 @@ export interface Poem {
   type: string;
   author: string;
   translator?: string;
-  "title pl"?: string;
+  title_pl?: string;
+  body_pl?: string;
+  lang: string;
 }

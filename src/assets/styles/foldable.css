@@ -1,0 +1,16 @@
+.folded {
+  background-color: #FAFAFA;
+  margin-left: 0;
+  height: 40px;
+}
+
+.unfolded {
+  background-color: #FFFFFF;
+  margin-left: 20px;
+}
+
+.poem {
+  padding: 10px;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}

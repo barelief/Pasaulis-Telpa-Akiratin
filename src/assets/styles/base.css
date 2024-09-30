@@ -33,6 +33,18 @@ pre {
   font-family: "Playfair Display";
 }
 
+.poem-element {
+    scroll-margin-top: 70px;
+
+}
+
+:target::before {
+    content: '';
+    display: block;
+    height: 50px; /* Adjust based on header height */
+    margin: -50px 0 0 0;
+}
+
 @layer components {
   .btn-round {
     @apply rounded-full;
