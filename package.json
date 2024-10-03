@@ -22,6 +22,7 @@
     "@types/react-dom": "^18.3.0",
     "airtable": "^0.12.2",
     "astro": "^4.15.8",
+    "astro-i18n-aut": "^0.7.0",
     "canvas-confetti": "^1.9.3",
     "nanostores": "^0.11.2",
     "react": "^18.3.1",

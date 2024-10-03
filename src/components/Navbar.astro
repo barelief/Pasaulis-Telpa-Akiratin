@@ -1,9 +1,21 @@
 ---
 // import logo from "../assets/images/favicon.png";
 // import { Image } from "astro:assets";
+
 import ToggleFlyoutCart from "../components/react/ToggleFlyoutCart.tsx";
 import ToggleFlyoutLikes from "../components/react/ToggleFlyoutLikes.tsx";
 import ReopenLastModal from "../components/react/modal/ReopenLastModal.jsx";
+
+// locale routines
+import { getLocale, getLocaleUrl } from "astro-i18n-aut";
+import { getUiData } from "../config/getUiData";
+
+const locale = getLocale(Astro.url) as 'lt' | 'pl';
+
+const aboutText = getUiData(locale, 'header', 'about');
+
+import { switchLang, invertLocale } from "../scripts/localeWrappers.ts";
+const invertedLocale = invertLocale(locale);
 ---
 
 <header class="sticky top-0 z-10">
@@ -12,13 +24,13 @@ import ReopenLastModal from "../components/react/modal/ReopenLastModal.jsx";
       class="bg-white shadow-md rounded-lg p-4 flex items-center justify-between w-full max-w-4xl"
     >
       <!-- Left Side - Links -->
-      <div class="flex items-center gap-4 relative inline-block">
+      <div class="flex items-center gap-4 relative">
         <!-- Home Link -->
         <!-- <a href="#home" class="text-gray-700 text-lg hover:text-blue-500 transition-colors duration-300"><Image src={logo} alt="Favicon" class="h-[20px] w-[20px]"  /></a> -->
         <!-- About Project Link -->
 
-        <div class="relative inline-block flex items-center pt-1 pr-3">
-          <a href={import.meta.env.BASE_URL} rel="prefetch">
+        <div class="relative flex items-center pt-1 pr-3">
+          <a href={`${getLocaleUrl(import.meta.env.BASE_URL, locale)}`} rel="prefetch">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -31,12 +43,12 @@ import ReopenLastModal from "../components/react/modal/ReopenLastModal.jsx";
             >
           </a>
         </div>
-        <div class="relative inline-block flex items-center">
+        <div class="relative flex items-center">
           <a
             rel="prefetch"
-            href={`${import.meta.env.BASE_URL}apie`}
+            href={`${getLocaleUrl(import.meta.env.BASE_URL, locale)}apie/`}
             class="text-gray-700 text-lg hover:text-blue-500 transition-colors duration-300"
-            >apie knygą</a
+            >{aboutText}</a
           >
         </div>
       </div>
@@ -45,22 +57,22 @@ import ReopenLastModal from "../components/react/modal/ReopenLastModal.jsx";
       <div class="flex items-center gap-4">
         <!-- <ReopenLastModal client:only="react" /> -->
         <!-- Language Switcher -->
-        <div class="relative inline-block flex items-center">
-          <!-- <select
-            class="appearance-none bg-gray-100 border border-gray-300 text-gray-700 py-1 px-4 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 font-sans"
-          >
-            <option>PL</option>
-            <option>LT</option>
-          </select>-->
-          <span class="font-mono text-sm">PL</span>
+        <div class="relative flex items-center">
+          <span>
+            <a rel="prefetch" href={getLocaleUrl(Astro.url, invertedLocale)}>
+              <span class="font-mono text-sm"
+                >{invertedLocale.toUpperCase()}</span
+              >
+            </a>
+          </span>
         </div>
 
         <!-- Shopping Cart Icon -->
-        <div class="relative inline-block flex items-center">
+        <div class="relative flex items-center">
           <ToggleFlyoutCart client:only="react" />
         </div>
         <!-- liked Poems icon likedFlyoutToggle -->
-        <div class="relative inline-block flex items-center">
+        <div class="relative flex items-center">
           <ToggleFlyoutLikes client:only="react" />
         </div>
       </div>
