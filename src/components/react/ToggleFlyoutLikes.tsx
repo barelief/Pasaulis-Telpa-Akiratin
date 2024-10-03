@@ -11,6 +11,19 @@ const ToggleFlyoutLikes: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToPoem = (e: React.MouseEvent<HTMLAnchorElement>, poemId: number) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(`poem${poemId}`);
+    if (targetElement) {
+      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - 60; // Adjust 60px offset
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="relative inline-block">
       <a
@@ -51,7 +64,10 @@ const ToggleFlyoutLikes: React.FC = () => {
             <ul className="text-xs text-gray-700 list-disc ml-3">
               {likedPoemsList.map((poem) => (
                 <li key={poem.id} className="py-1">
-                  <a href={`#poem${poem.id}`}>„{poem.title}“ {poem.author}</a>
+                  <a
+                    href={`#poem${poem.id}`}
+                    onClick={(e) => scrollToPoem(e, poem.id)}
+                  >„{poem.title}“ {poem.author}</a>
                 </li>
               ))}
             </ul>
