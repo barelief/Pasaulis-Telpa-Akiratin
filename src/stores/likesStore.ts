@@ -40,7 +40,7 @@ export function addLikedPoem(poem: likedPoem) {
 
 // Function to remove a poem from the liked poems list by its id
 export function removeLikedPoem(poemId: string) {
-  likedPoems.setKey(poemId, undefined);  // Remove the poem from the map (sets it to undefined)
+  likedPoems.setKey(poemId, undefined as unknown as likedPoem);  // Remove the poem from the map (sets it to undefined)
   console.log(`removed poem from liked poems list!`);  // Log the removal action
 }
 

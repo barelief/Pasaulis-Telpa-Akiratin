@@ -11,7 +11,7 @@ const ToggleFlyoutLikes: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
-  const scrollToPoem = (e: React.MouseEvent<HTMLAnchorElement>, poemId: number) => {
+  const scrollToPoem = (e: React.MouseEvent<HTMLAnchorElement>, poemId: string) => {
     e.preventDefault();
     const targetElement = document.getElementById(`poem${poemId}`);
     if (targetElement) {
