@@ -1,16 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import image1 from "../assets/images/textures/baldai.jpg"
-import image2 from "../assets/images/textures/cover2.jpg"
-import image3 from "../assets/images/textures/pta.jpg"
+import image1 from "../assets/images/textures/baldai.jpg";
+import image2 from "../assets/images/textures/cover2.jpg";
+import image3 from "../assets/images/textures/pta.jpg";
+
 ---
 
 <Layout title="Skaitytojams">
   <main class="poem-body md:px-10 p-4 text-justify">
     <div class="pb-3">Brangūs skaitytojai,</div>
 
-    <div >
+    <div>
       rinktinės <i>Pasaulis telpa akiratin</i> idėja – ieškoti saitų tarp lietuviškai
       <nobr>ir lenkiškai</nobr>
       kuriančių poetų, rašančių nepriklausomoje Lietuvoje, po <nobr
@@ -20,10 +21,14 @@ import image3 from "../assets/images/textures/pta.jpg"
       atsispindi ne tik autorių tapatybė, asmeninės istorijos ir svajonės, bet
       ir tai, kaip jie interpretuoja kasdienius šiuolaikinio pasaulio iššūkius.
     </div>
-<div class="flex justify-center">
-    <Image src={image1} alt="Baldai, Romuald Ławrynowicz" class="py-10 rounded w-3/4"/>
+    <div class="flex justify-center">
+      <Image
+        src={image1}
+        alt="Baldai, Romuald Ławrynowicz"
+        class="py-10 rounded w-3/4"
+      />
     </div>
-      <div >
+    <div>
       Rinkdamas eilėraščius antologijai įtraukiau tiek autorius, pelniusius
       literatūrinių apdovanojimų, tiek debiutantus. Rinktinės <i
         >Pasaulis telpa akiratin</i
@@ -36,9 +41,13 @@ import image3 from "../assets/images/textures/pta.jpg"
       autorėms kaip Laura Kromalcaitė ir Maria Żukowska tai pasaulis, kuriame jos
       gyvena, nors kiti tokią tikrovę vadintų utopija.
     </div>
-<div class="flex justify-center">
-    <Image src={image2} alt="Pasaulis telpa akiratin cover" class="py-10 rounded w-3/4"/>
-</div>
+    <div class="flex justify-center">
+      <Image
+        src={image2}
+        alt="Pasaulis telpa akiratin cover"
+        class="py-10 rounded w-3/4"
+      />
+    </div>
     <div>
       Visos trys knygos dalys pasižymi savita dinamika, kiekvienoje iš jų lenkų
       ir lietuvių autoriai pagrindinę temą plėtoja savaip. Teminius tiltus
@@ -51,10 +60,9 @@ import image3 from "../assets/images/textures/pta.jpg"
       persipina su lietuviškų eilėraščių vertimais į lenkų kalbą. Abi kalbos susitinka
       ties viduriu.
     </div>
-<div class="flex justify-center">
-
-    <Image src={image3} alt="Knygos vidus" class="py-10 rounded w-3/4"/>
-</div>
+    <div class="flex justify-center">
+      <Image src={image3} alt="Knygos vidus" class="py-10 rounded w-3/4" />
+    </div>
     <div>
       <i>Pasaulis telpa akiratin</i> gali tapti ir įvairovės manifestu, ir bendrumo
       liudijimu – rinktinė taip pat skirta lietuvių ir lenkų literatūros laukų kultūriniams
